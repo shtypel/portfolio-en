@@ -1,1 +1,560 @@
+* {
+  box-sizing: border-box;
+}
 
+:root {
+  --bg-main: #050505;
+  --bg-card: #0d0d0d;
+  --bg-card-hover: #121212;
+
+  --text-main: #ffffff;
+  --text-muted: #cfcfcf;
+  --text-soft: #9ca3af;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+
+  --tag-bg: #111111;
+  --tag-bg-hover: #171717;
+  --tag-text: #ffffff;
+
+  --link: #ffffff;
+  --link-hover: #d4d4d4;
+
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 14px 32px rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  color: var(--text-main);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+.project-description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.tag {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: transparent;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 2px solid var(--border-hover);
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+.contact-info a {
+  color: var(--link);
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--link-hover);
+  opacity: 0.8;
+}
+
+/* Base card style */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  box-shadow: var(--shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease, background 0.22s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+
+/* Disable generic card hover behavior for flip cards */
+.subject-flip-card.card:hover,
+.subject-flip-front.card:hover,
+.subject-flip-back.card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Generic tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--tag-text);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.tags span:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  background: var(--tag-bg-hover);
+}
+
+.tags i {
+  font-size: 18px;
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  background: var(--bg-card-hover);
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Publications */
+.publication-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .publication-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.publication-card h3 {
+  margin-bottom: 10px;
+}
+
+.publication-meta {
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.publication-date {
+  color: var(--text-soft);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.publication-description {
+  margin-top: 16px;
+  margin-bottom: 18px;
+  color: var(--text-muted);
+}
+
+.publication-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text-main);
+  background: var(--tag-bg);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  background: var(--tag-bg-hover);
+}
+
+/* Education */
+.education-main {
+  margin-bottom: 20px;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.subject-flip-card {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  perspective: 1200px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
+  overflow: visible;
+}
+
+.subject-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.7s ease;
+  will-change: transform;
+  pointer-events: none;
+}
+
+.subject-flip-card:hover .subject-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.subject-flip-front,
+.subject-flip-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  color: var(--text-main);
+  box-shadow: var(--shadow);
+  margin-bottom: 0;
+}
+
+.subject-flip-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: rotateY(0deg);
+}
+
+.subject-flip-back {
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.subject-flip-front h3,
+.subject-flip-back h3 {
+  margin-bottom: 12px;
+}
+
+.subject-flip-front p,
+.subject-flip-back p {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+.subject-flip-back ul {
+  padding-left: 20px;
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.subject-flip-back li {
+  margin-bottom: 6px;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== PROJECTS SECTION ===== */
+
+.projects {
+  margin-top: 40px;
+}
+
+.projects-wrapper {
+  position: relative;
+}
+
+.projects-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.project-card {
+  flex: 0 0 calc((100% - 20px) / 2);
+  min-width: 280px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.project-description {
+  margin-bottom: 16px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.project-tags span {
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--tag-text);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.project-tags span:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  background: var(--tag-bg-hover);
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+  height: 40px;
+}
+
+.project-note {
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .project-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 100%;
+    min-width: 260px;
+  }
+}
+
+/* GitHub icon (LEFT) */
+.github-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--tag-bg);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.github-icon i {
+  font-size: 18px;
+  color: var(--text-main);
+}
+
+/* PDF button (RIGHT) */
+.pdf-link {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--tag-bg);
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effects */
+.github-icon:hover,
+.pdf-link:hover {
+  transform: translateY(-2px);
+  background: var(--tag-bg-hover);
+  border-color: var(--border-hover);
+  color: var(--text-main);
+}
+
+.github-icon,
+.github-icon:visited,
+.pdf-link,
+.pdf-link:visited {
+  color: var(--text-main);
+}
+
+.github-icon i {
+  color: var(--text-main);
+}
+
+/* Force white-ish links for project buttons */
+.project-links a,
+.project-links a:visited,
+.project-links a:active {
+  color: var(--text-main) !important;
+  text-decoration: none;
+}
+
+.project-links a i {
+  color: var(--text-main) !important;
+}
+
+.project-links a:hover {
+  color: var(--text-main) !important;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+}
+
+/* Scroll arrows */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--tag-bg);
+  color: var(--text-main);
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.scroll-btn.left {
+  left: -20px;
+}
+
+.scroll-btn.right {
+  right: -20px;
+}
+
+.scroll-btn:hover {
+  transform: translateY(-50%) translateY(-2px);
+  background: var(--tag-bg-hover);
+  border-color: var(--border-hover);
+}
+
+/* Better text defaults inside cards */
+.card p,
+.card li,
+.card span:not(.project-tags span):not(.tags span) {
+  color: var(--text-muted);
+}
