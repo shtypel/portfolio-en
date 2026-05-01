@@ -1,1 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arisha Shtypel | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
 
+    <header class="hero">
+      <img src="assets/images/profile_photo.jpeg" alt="Profile photo" class="profile-photo">
+      <h1>Ариша Штыпель</h1>
+
+      <div class="contact-info">
+        <a href="mailto:arisha.shtypel@gmail.com">Email</a>
+        <a href="https://github.com/shtypel" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <section class="about card">
+      <h2>Профиль</h2>
+      <p>
+        Аналитик данных с фокусом на антифрод, AML и финансовые расследования. 
+        Работаю с SQL, Python и R для анализа транзакционных данных, выявления аномалий, 
+        построения поведенческих baseline-показателей и интерпретации риск-паттернов. 
+        Имею практический опыт разработки аналитических проектов по Account Takeover Fraud, 
+        криптовалютному мошенничеству, коррупционным рискам и организованной преступности. 
+        Выпускница University College London (BSc Security and Crime Science), 
+        где изучала анализ данных, киберпреступность, финансовую преступность, криминальные расследования 
+        и методы предотвращения преступлений.
+      </p>
+    </section>
+
+    <section class="stack card">
+      <h2>Технические навыки</h2>
+      <div class="tags">
+        <span><i class="devicon-python-plain colored"></i> Python</span>
+        <span><i class="devicon-pandas-original"></i> pandas</span>
+        <span><i class="devicon-scikitlearn-plain"></i> scikit-learn</span>
+        <span><i class="devicon-mysql-plain"></i> MySQL</span>
+        <span><i class="devicon-r-plain"></i> R</span>
+        <span><i class="devicon-jupyter-plain"></i> Jupyter</span>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2><i class="fas fa-chart-line"></i> Проекты</h2>
+
+      <div class="projects-wrapper">
+
+      <button class="scroll-btn left">&#8249;</button>
+      <div class="projects-scroll">
+    
+        <!-- Project 1 -->
+        <div class="project-card card">
+    
+          <h3>Анализ восприятия коррупции и безопасности в Гонконге</h3>
+    
+          <p class="project-description">
+            Анализ взаимосвязи между восприятием безопасности и коррупции на основе данных World Values Survey (Гонконг, ~2000 наблюдений).
+    
+            Проведено построение и сравнение моделей бинарной логистической и множественной линейной регрессии для оценки влияния субъективной коррупции и демографических факторов. Дополнительно выполнен анализ взаимодействий (moderation analysis).
+    
+          </p>
+    
+          <div class="project-tags">
+            <span>R</span>
+            <span>Logistic Regression</span>
+            <span>Linear Regression</span>
+            <span>Statistical Inference</span>
+          </div>
+    
+          <div class="project-links">
+
+            <a href="https://github.com/shtypel/hk-corruption-security-analysis" target="_blank" class="github-icon">
+              <i class="devicon-github-original"></i>
+            </a>
+          
+            <a href="assets/pdfs/corruption-security-analysis_regression.pdf" target="_blank" class="pdf-link">
+              PDF
+            </a>
+          
+          </div>
+        </div>
+    
+        <!-- Project 2 (placeholder) -->
+        <div class="project-card card">
+    
+          <h3>Детекция Account Takeover в транзакционных данных</h3>
+    
+          <p class="project-description">
+            SQL-анализ транзакций для выявления признаков компрометации аккаунтов. 
+            Обнаружение аномалий в поведении пользователей: рост частоты операций, 
+            нетипичные суммы, активность после периода неактивности и повышенные попытки входа.
+          </p>
+    
+          <div class="project-tags">
+            <span>SQL</span>
+            <span>Анализ транзакций</span>
+            <span>Оконные функции</span>
+            <span>CTE/Joins</span>
+            <span>Risk Scoring</span>
+          </div>
+    
+          <div class="project-links">
+
+            <a href="https://github.com/shtypel/fraud-data-analytics" target="_blank" class="github-icon">
+              <i class="devicon-github-original"></i>
+            </a>
+            
+            <a href="assets/pdfs/fraud-data-analytics.pdf" target="_blank" class="pdf-link">
+              PDF
+            </a>
+            
+          </div>
+        </div>
+    
+        <!-- Project 3 (placeholder) -->
+        <div class="project-card card">
+          <h3>Разработка антифрод-пайплайна для выявления подозрительной активности</h3>
+    
+          <p class="project-description">
+            Разработка end-to-end антифрод-пайплайна: загрузка и предобработка данных, построение признаков, выявление поведенческих аномалий и генерация алертов. Проект ориентирован на моделирование реальных систем мониторинга мошенничества.
+          </p>
+    
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Pandas</span>
+            <span>ETL-пайплайны</span>
+            <span>Feature Engineering</span>
+          </div>
+    
+          <div class="project-links">
+            <span class="project-note">Скоро</span>
+          </div>
+        </div>
+
+        <!-- Project 4 (placeholder) -->
+        <div class="project-card card">
+    
+          <h3>OSINT анализ фиктивных компаний и схем обналичивания (Shell Company Fraud)</h3>
+    
+          <p class="project-description">
+            Анализ схем мошенничества с использованием фиктивных компаний (shell companies) на основе открытых источников (OSINT): исследование структуры схем, ролей участников и методов сокрытия финансовых потоков. Проект направлен на выявление закономерностей и формирование подходов к обнаружению и предотвращению подобных схем.
+          </p>
+    
+          <div class="project-tags">
+            <span>OSINT</span>
+            <span>Анализ мошеннических схем</span>
+            <span>Shell companies</span>
+          </div>
+    
+          <div class="project-links">
+            <span class="project-note">Скоро</span>
+          </div>
+        </div>
+        
+        <button class="scroll-btn right">&#8250;</button>
+      </div>
+    </section>
+    <section class="publications">
+      <h2><i class="fas fa-file-lines"></i> Публикации</h2>
+    
+      <div class="publication-grid">
+        <div class="card publication-card">
+          <h3>Взаимосвязь торговли людьми и торговли наркотиками: выявление паттернов использования запрещённых веществ на жертвах с целью контроля</h3>
+    
+          <p class="publication-meta">Дипломная работа: бакалавр University College London</p>
+          <p class="publication-date">Сентябрь 2024</p>
+    
+          <div class="tags">
+            <span>Организованная преступность</span>
+            <span>Торговля людьми</span>
+            <span>PCA</span>
+          </div>
+    
+          <p class="publication-description">
+            Исследование посвящено взаимосвязи торговли людьми и торговли наркотиками через анализ использования запрещённых веществ как средства контроля над жертвами. Работа основана на данных CTDC и применяет PCA для выявления демографических, географических и поведенческих паттернов.
+          </p>
+    
+          <div class="publication-links">
+      
+            <a href="assets/pdfs/BSc Dissertation.pdf" target="_blank" class="btn-link">PDF</a>
+          </div>
+        </div>
+
+        <!-- Crypto Article -->
+        <div class="card publication-card">
+          <h3>Анализ наиболее распространенных мошеннических схем, связанных с криптовалютами</h3>
+    
+          <p class="publication-meta">Статья: Financial Crime Digest</p>
+          <p class="publication-date">Март 2023</p>
+    
+          <div class="tags">
+            <span>Cryptocurrency scams</span>
+            <span>DeFi</span>
+            <span>Rug pulls</span>
+          </div>
+    
+          <p class="publication-description">
+            Аналитическая статья, посвящённая ключевым типам мошенничества в криптовалютной сфере, включая rug pulls, pump-and-dump и Ponzi-схемы. Рассматриваются механики реализации атак, поведенческие паттерны злоумышленников и ключевые риски, связанные с недостатком регулирования и анонимностью криптовалют.
+          </p>
+    
+          <div class="publication-links">
+          
+            <a href="assets/pdfs/cryptocurrency-article.pdf" target="_blank" class="btn-link">PDF</a>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+<section class="education">
+  <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
+
+  <div class="card education-main">
+    <h3>University College London</h3>
+    <p>BSc Security and Crime Science</p>
+    <p>Выпуск: 2024</p>
+  </div>
+
+  <div class="education-grid">
+
+    <div class="subject-flip-card">
+      <div class="subject-flip-inner">
+        <div class="subject-flip-front card">
+          <h3>Data Science</h3>
+          <p>
+            Изучение методов анализа данных и машинного обучения в R для выявления закономерностей в структурированных и текстовых данных.
+          </p>
+        </div>
+        <div class="subject-flip-back card">
+          <h3>Ключевые навыки</h3>
+          <ul>
+            <li>Сбор и предобработка данных (web scraping, API)</li>
+            <li>TF-IDF, Bag-of-Words, n-граммы</li>
+            <li>Кластеризация (k-means), PCA</li>
+            <li>Классификация и регрессия</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-flip-card">
+      <div class="subject-flip-inner">
+        <div class="subject-flip-front card">
+          <h3>Программирование и анализ данных</h3>
+          <p>
+            Изучение Python и анализа данных с акцентом на практическое применение в аналитических задачах и обработке данных.
+          </p>
+        </div>
+        <div class="subject-flip-back card">
+          <h3>Ключевые навыки</h3>
+          <ul>
+            <li>Python (Pandas, NumPy)</li>
+            <li>SQL (JOIN, GROUP BY, оконные функции)</li>
+            <li>Очистка данных и feature engineering</li>
+            <li>Визуализация (Matplotlib, Seaborn)</li>
+            <li>Machine Learning модели Scikit-learn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-flip-card">
+      <div class="subject-flip-inner">
+        <div class="subject-flip-front card">
+          <h3>Киберпреступность</h3>
+          <p>
+            Изучение механизмов киберпреступности, цифрового мошенничества и кибератак, включая их реализацию, мотивацию и методы противодействия.
+          </p>
+        </div>
+        <div class="subject-flip-back card">
+          <h3>Ключевые навыки</h3>
+          <ul>
+            <li>Анализ онлайн-мошенничества (phishing, ATO)</li>
+            <li>Массовый фрод vs целевые атаки (APT)</li>
+            <li>Инфраструктура киберпреступности (dark web, C2)</li>
+            <li>Методы предотвращения и защиты</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-flip-card">
+      <div class="subject-flip-inner">
+        <div class="subject-flip-front card">
+          <h3>Criminal Investigation and Intelligence/Криминальные расследования</h3>
+          <p>
+            Изучение методов расследования и анализа информации для выявления преступных схем и построения доказательных выводов.
+          </p>
+        </div>
+        <div class="subject-flip-back card">
+          <h3>Ключевые навыки</h3>
+          <ul>
+            <li>Intelligence cycle и hypothesis testing</li>
+            <li>Анализ и верификация данных</li>
+            <li>Выявление связей и паттернов</li>
+            <li>Построение аналитических версий</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="subject-flip-card">
+      <div class="subject-flip-inner">
+        <div class="subject-flip-front card">
+          <h3>Статистика</h3>
+          <p>
+            Изучение вероятностных и статистических методов для анализа неопределённости, выявления закономерностей и обоснования выводов на основе данных.
+          </p>
+        </div>
+        <div class="subject-flip-back card">
+          <h3>Ключевые навыки</h3>
+          <ul>
+            <li>Вероятности и распределения</li>
+            <li>Проверка гипотез и доверительные интервалы</li>
+            <li>Работа с выборками (bias, variance)</li>
+            <li>Линейная и логистическая регрессия</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+    <script>
+      const scrollContainer = document.querySelector('.projects-scroll');
+      const leftBtn = document.querySelector('.scroll-btn.left');
+      const rightBtn = document.querySelector('.scroll-btn.right');
+    
+      const scrollAmount = scrollContainer.clientWidth / 2;
+    
+      rightBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    
+      leftBtn.addEventListener('click', () => {
+        scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+  </script>
+</body>
+</html>
