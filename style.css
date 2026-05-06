@@ -266,6 +266,7 @@ h2 {
 }
 
 .education-grid {
+  margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
