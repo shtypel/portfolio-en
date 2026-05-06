@@ -1,6 +1,6 @@
 # Arisha Shtypel | Portfolio
 
-shtypel.github.io/portfolio-en/
+https://shtypel.github.io/portfolio-en/
 
 ## Tech stack
 
