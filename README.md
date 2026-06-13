@@ -4,7 +4,7 @@ https://shtypel.github.io/portfolio-en/
 
 ## Tech stack
 
-SQL, MySQL, Python, pandas, scikit-learn, R, Jupyter Notebook 
+SQL, MySQL, Python, pandas, scikit-learn, R, Jupyter Notebook, Tableau 
 
 ## Repository Structure
 ```
