@@ -499,6 +499,22 @@ h2 {
   transition: all 0.2s ease;
 }
 
+.tableau-link-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    color: var(--accent-color);
+}
+
+.tableau-link-left:hover {
+    opacity: 0.8;
+}
+
 /* Hover effects */
 .github-icon:hover,
 .pdf-link:hover {
